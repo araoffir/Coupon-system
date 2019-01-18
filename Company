@@ -1,0 +1,77 @@
+
+public class Company {
+	private Integer COMId;
+	private String COMname;
+	private String COMpassword;
+	private String COMemail;
+
+	public Company(Integer cOMId, String cOMname, String cOMpassword, String cOMemail) {
+		COMId = cOMId;
+		COMname = cOMname;
+		COMpassword = cOMpassword;
+		COMemail = cOMemail;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((COMId == null) ? 0 : COMId.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Company other = (Company) obj;
+		if (COMId == null) {
+			if (other.COMId != null)
+				return false;
+		} else if (!COMId.equals(other.COMId))
+			return false;
+		return true;
+	}
+
+	private Integer getCOMId() {
+		return COMId;
+	}
+
+	private void setCOMId(Integer cOMId) {
+		COMId = cOMId;
+	}
+
+	private String getCOMname() {
+		return COMname;
+	}
+
+	private void setCOMname(String cOMname) {
+		COMname = cOMname;
+	}
+
+	private String getCOMpassword() {
+		return COMpassword;
+	}
+
+	private void setCOMpassword(String cOMpassword) {
+		COMpassword = cOMpassword;
+	}
+
+	private String getCOMemail() {
+		return COMemail;
+	}
+
+	private void setCOMemail(String cOMemail) {
+		COMemail = cOMemail;
+	}
+
+	@Override
+	public String toString() {
+		return "Company [COMId=" + COMId + ", COMname=" + COMname + ", COMemail=" + COMemail + "]";
+	}
+
+}
